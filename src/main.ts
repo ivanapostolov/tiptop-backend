@@ -7,6 +7,8 @@ async function bootstrap()
 {
     const app = await NestFactory.create(AppModule);
 
+    app.enableCors();
+
     const config = new DocumentBuilder()
         .setTitle('TipTop Backend')
         .setDescription('A NestJS API for the TipTop cleaning platform.')
